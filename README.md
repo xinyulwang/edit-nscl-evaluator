@@ -16,9 +16,16 @@ The expected behavior is to change the style while preserving the original conte
 
 The example below shows one real failure case.
 
-| Original image | Edited image from model |
-|---|---|
-| ![Original image](images/originals/original_001.png) | ![Edited image](images/edits/001_edited_style_size.png) |
+<p align="center">
+  <img src="images/originals/original_001.png" width="360">
+  <img src="images/edits/001_edited_style_size.png" width="360">
+</p>
+
+<p align="center">
+  <b>Original image</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Edited image from model</b>
+</p>
+
 
 ## Goal
 
