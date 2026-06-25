@@ -1,0 +1,6 @@
+# update github repo
+git status
+git add . # add all updated files
+git add -A -f # Force
+git commit -m "Update"
+git push
