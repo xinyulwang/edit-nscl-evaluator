@@ -1,11 +1,10 @@
 [
   {
-    "id": "demo_001",
-    "original_image": "images/originals/demo.png",
-    "edited_image": "images/edits/demo_warm.png",
-    "instruction": "make the image warmer without changing the objects",
-    "human_label": "success",
-    "failure_type": "none",
+    "id": "style_001",
+    "original_image": "images/originals/original_001.png",
+    "edited_image": "images/edits/001_edited_style_size.png",
+    "instruction": "Please make this image in a Wong Kar-wai style.",
+    "target_style": "Wong Kar-wai",
     "original_objects": ["lighthouse", "building", "rocks", "ocean", "sky", "clouds"],
     "edited_objects": ["lighthouse", "building", "rocks", "ocean", "sky", "clouds"]
   }

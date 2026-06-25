@@ -1,44 +1,41 @@
 """
-Instruction-to-program template.
+Instruction-to-program templates.
 
-This file converts a natural language editing instruction into a symbolic program.
-Each program step is later executed by a concept executor.
+This file converts a natural language instruction into a symbolic program.
 """
 
 
 def instruction_to_program(instruction: str):
-    # Convert instruction to lowercase for easier matching
-    instruction = instruction.lower()
+    instruction_lower = instruction.lower()
 
-    # Case 1: Make image warmer and preserve objects
-    if "warmer" in instruction and "without changing" in instruction:
+    if "wong kar-wai" in instruction_lower or "style" in instruction_lower:
         return [
-            # Increase image warmth
-            {"op": "Modify", "concept": "Warmth", "direction": "increase"},
-
-            # Preserve the original object set
-            {"op": "Preserve", "concept": "ObjectSet"},
-
-            # Do not add new objects
-            {"op": "Forbid", "concept": "AddObject"},
-
-            # Do not remove existing objects
-            {"op": "Forbid", "concept": "RemoveObject"},
+            {
+                "op": "Modify",
+                "concept": "Style",
+                "target": "Wong Kar-wai"
+            },
+            {
+                "op": "Preserve",
+                "concept": "ObjectSet"
+            },
+            {
+                "op": "Preserve",
+                "concept": "ImageSize"
+            }
         ]
 
-    # Case 2: Only make image warmer
-    if "warmer" in instruction:
+    if "warmer" in instruction_lower or "warm" in instruction_lower:
         return [
-            # Increase image warmth
-            {"op": "Modify", "concept": "Warmth", "direction": "increase"},
+            {
+                "op": "Modify",
+                "concept": "Warmth",
+                "direction": "increase"
+            },
+            {
+                "op": "Preserve",
+                "concept": "ObjectSet"
+            }
         ]
 
-    # Case 3: Increase image contrast
-    if "contrast" in instruction:
-        return [
-            # Increase image contrast
-            {"op": "Modify", "concept": "Contrast", "direction": "increase"},
-        ]
-
-    # Raise an error if the instruction is not supported
     raise ValueError(f"Unknown instruction: {instruction}")

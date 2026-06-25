@@ -4,3 +4,7 @@ git add . # add all updated files
 git add -A -f # Force
 git commit -m "Update"
 git push
+
+
+# run
+python3 -m evaluation.run
