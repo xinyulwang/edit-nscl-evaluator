@@ -20,7 +20,7 @@ The example below shows one real failure case.
   <img src="images/read_me_1.png" width="600">
 </p>
 <p align="center">
-  <img src="images/read_me_2.png" width="600">
+  <img src="images/read_me_2.png" width="385">
 </p>
 
 
