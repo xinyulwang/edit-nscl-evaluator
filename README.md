@@ -14,7 +14,7 @@ Please make this image in a Wong Kar-wai style.
 
 The expected behavior is to change the style while preserving the original content.
 
-The example below shows one real failure case.
+The examples below show two real failure cases.
 
 <p align="center">
   <img src="images/read_me_1.png" width="600">
